@@ -18,44 +18,73 @@ st.markdown("""
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     
-    /* ปรับแต่งส่วน Header ของแอป */
+    /* พื้นหลัง Gradient สีพาสเทลม่วงอ่อน */
     .stApp {
-        background-color: #0e1117;
+        background: linear-gradient(135deg, #f3e8ff, #e9d5ff, #d8b4fe) !important;
+        background-attachment: fixed !important;
     }
     
+    /* Sidebar แบบ Glassmorphism */
+    [data-testid="stSidebar"] {
+        background: rgba(255, 255, 255, 0.35) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    /* Metric Cards แบบ Glassmorphism */
     .stMetric {
-        background: #1e212b;
+        background: rgba(255, 255, 255, 0.45) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
         padding: 15px;
-        border-radius: 12px;
-        border: 1px solid #2d313f;
+        box-shadow: 0 8px 32px 0 rgba(147, 51, 234, 0.08) !important;
+        color: #4a2c5a !important;
     }
     
-    /* ปรับแต่งปุ่มให้ดู Modern */
+    /* ปรับแต่งปุ่ม (Glass Button) พร้อม Hover Effect */
     .stButton>button {
-        background-color: #6C5CE7;
-        color: white;
-        border-radius: 8px;
-        border: none;
+        background: rgba(216, 180, 254, 0.5) !important;
+        backdrop-filter: blur(8px) !important;
+        color: #4a2c5a !important;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.7) !important;
         padding: 10px 20px;
-        font-weight: 600;
-        transition: all 0.3s ease;
+        font-weight: bold;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        box-shadow: 0 4px 15px rgba(147, 51, 234, 0.1) !important;
     }
     
     .stButton>button:hover {
-        background-color: #a29bfe;
-        box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+        background: rgba(216, 180, 254, 0.85) !important;
+        transform: translateY(-4px) !important;
+        box-shadow: 0 10px 25px rgba(147, 51, 234, 0.25) !important;
+        border: 1px solid rgba(255, 255, 255, 0.9) !important;
+        color: #3b0764 !important;
     }
     
     /* ปรับหัวข้อ */
-    h1, h2, h3 {
-        color: #f0f0ff;
+    h1, h2, h3, p, span {
+        color: #3b0764 !important;
     }
     
     .card-title {
         font-size: 1.2rem;
         font-weight: bold;
-        color: #f0f0ff;
+        color: #4a2c5a !important;
         margin-bottom: 0.5rem;
+    }
+    
+    /* Dataframe Glassmorphism */
+    [data-testid="stDataFrame"] {
+        background: rgba(255, 255, 255, 0.45) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
+        padding: 10px;
+        box-shadow: 0 8px 32px 0 rgba(147, 51, 234, 0.08) !important;
     }
 </style>
 """, unsafe_allow_html=True)
